@@ -1,0 +1,28 @@
+\section{Small World Behavior}
+
+    As proposed, we need $\lim_{P \to \infty} \frac{d_{\max}}{\ln N}$. First note, however, that
+    \begin{align*}
+        \lim_{P \to \infty} \frac{\ln N}{\ln (k-1)^P}
+        &= \lim_{P \to \infty} \frac{N^{-1} \cdot \frac{d N}{dP}}{\ln(k-1)}
+        = \frac{1}{\ln(k-1)} \lim_{P \to \infty} \frac{k \frac{(k-1)^P \ln(k-1)}{k-2}}{k \frac{(k-1)^P - 1}{k - 2} + 1} \\
+        &= \lim_{P \to \infty} \frac{(k-1)^P}{(k-1)^P - 1 + \frac{k-2}{k}}
+        = \lim_{P \to \infty} \frac{1}{1 - \frac{-\frac{2}{k}}{(k-1)^P}} \\
+        &= 1
+    \end{align*}
+
+    Therefore, the limit of $\frac{d_{\max}}{\ln N}$ is only positive when $\lim_{P \to \infty} \frac{d_{\max}}{\ln(k-1)^P}$ is also positive. Thus,
+    \begin{align*}
+        \lim_{P \to \infty} \frac{d_{\max}}{\ln(k-1)^P} =  \lim_{P \to \infty} \frac{P}{P \ln(k-1)} = \frac{1}{\ln(k-1)} > 0
+    \end{align*}
+
+    As such,
+    \begin{align*}
+        \lim_{P \to \infty} \frac{d_{\max}}{\ln N}
+        &= \left(\lim_{P \to \infty} \frac{d_{\max}}{\ln N}\right) \times 1 \\
+        &= \lim_{P \to \infty} \frac{d_{\max}}{\ln N} \times \lim_{P \to \infty} \frac{\ln N}{\ln (k-1)^P} \\
+        &= \lim_{P \to \infty} \left(\frac{d_{\max}}{\ln N} \times \frac{\ln N}{\ln (k-1)^P}\right) \\
+        &= \lim_{P \to \infty} \frac{d_{\max}}{\ln(k-1)^P} \\
+        &= \frac{1}{\ln(k-1)}
+    \end{align*}
+
+    Since $k \geq 3$, this limit is positive, asserting that $T(k,P)$ exhibits small world behavior.
