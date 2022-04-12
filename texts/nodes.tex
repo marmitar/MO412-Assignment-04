@@ -12,7 +12,7 @@
         V_i = \set{v \in V \mid \text{$v$ has depth $i$}}
     \]
 
-    For a layer $V_i$, $i \geq 2$, each node has $k$ neighbors, one of which is the parent on $V_{i-1}$. Therefore, $\abs{V_i} = (k - 1) \cdot \abs{V_{i-1}}$. The only exceptions are $V_0$ and $V_1$, with $\abs{V_0} = 1$ and $\abs{V_1} = 1$, respectively. Expanding the recurrence we get:
+    For a layer $V_i$, $i \geq 2$, each node has $k$ neighbors, one of which is the parent on $V_{i-1}$. Therefore, $\abs{V_i} = (k - 1) \cdot \abs{V_{i-1}}$. The only exceptions are $V_0$ and $V_1$, with $\abs{V_0} = 1$ and $\abs{V_1} = k$, respectively. Expanding the recurrence we get:
     \begin{align*}
         \abs{V_i} &= (k - 1) \abs{V_{j-1}} \\
         &= (k - 1) (k - 1) \abs{V_{j-2}} \\

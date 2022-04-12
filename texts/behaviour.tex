@@ -10,19 +10,19 @@
         &= 1
     \end{align*}
 
-    Therefore, the limit of $\frac{d_{\max}}{\ln N}$ is only positive when $\lim_{P \to \infty} \frac{d_{\max}}{\ln(k-1)^P}$ is also positive. Thus,
+    Therefore, the limit of $\frac{d_{\max}}{\ln N}$ is only positive when $\lim_{P \to \infty} \frac{d_{\max}}{\ln(k-1)^P}$ is also positive. Now,
     \begin{align*}
-        \lim_{P \to \infty} \frac{d_{\max}}{\ln(k-1)^P} =  \lim_{P \to \infty} \frac{P}{P \ln(k-1)} = \frac{1}{\ln(k-1)} > 0
+        \lim_{P \to \infty} \frac{d_{\max}}{\ln(k-1)^P} =  \lim_{P \to \infty} \frac{2 P}{P \ln(k-1)} = \frac{2}{\ln(k-1)} > 0
     \end{align*}
 
-    As such,
+    Thus,
     \begin{align*}
         \lim_{P \to \infty} \frac{d_{\max}}{\ln N}
         &= \left(\lim_{P \to \infty} \frac{d_{\max}}{\ln N}\right) \times 1 \\
         &= \lim_{P \to \infty} \frac{d_{\max}}{\ln N} \times \lim_{P \to \infty} \frac{\ln N}{\ln (k-1)^P} \\
         &= \lim_{P \to \infty} \left(\frac{d_{\max}}{\ln N} \times \frac{\ln N}{\ln (k-1)^P}\right) \\
         &= \lim_{P \to \infty} \frac{d_{\max}}{\ln(k-1)^P} \\
-        &= \frac{1}{\ln(k-1)}
+        &= \frac{2}{\ln(k-1)}
     \end{align*}
 
-    Since $k \geq 3$, this limit is positive, asserting that $T(k,P)$ exhibits small world behavior.
+    For $k \geq 3$, this limit is positive, asserting that $T(k,P)$ exhibits small world behavior.
