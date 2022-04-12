@@ -1,0 +1,15 @@
+\section{Number of Nodes}
+
+    \begin{figure}[H]
+        \centering
+        \includesvg[width=0.5\textwidth]{images/depth}
+
+        \caption{All 24 nodes with depth 4 of the $T(3, 5)$ from \cref{fig:caley-tree}.}
+    \end{figure}
+
+    We can detone the \textit{depth} of a node $u$ as the distance $d(u,c)$ from the central node $c$. Since each node has a unique depth, we can split the vertex set $V$ into a partition of subsets $V_i \subseteq V$ with $0 \leq i \leq P$ such that:
+    \[
+        V_i = \left\{v \in V \mid \text{$v$ has depth $i$}\right\}
+    \]
+
+    For a layer $V_j$, each node has $k$ neighbors, one of which is the parent on $V_{j-1}$. Therefore,
